@@ -1,0 +1,21 @@
+{
+  "name": "damian-bieniek-portfolio-project",
+  "version": "1.0.0.0",
+  "description": "Introduction of automation skills",
+  "main": "index.js",
+
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "bs:run:chrome": "browserstack-cypress run --browser \"chrome@latest:Windows 10\" --headed"
+  },
+
+  "devDependencies": {
+    "cypress": "^13.3.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
