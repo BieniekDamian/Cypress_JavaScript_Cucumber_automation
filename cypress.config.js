@@ -21,7 +21,7 @@ module.exports = defineConfig({
   },
   
   env: {
-    envVariableName: "",
+    login_page: "https://www.saucedemo.com/",
   },
 
   e2e: {
@@ -32,7 +32,8 @@ module.exports = defineConfig({
 
     testIsolation: false,
     specPattern: [
-      "**/testing/*.feature",
+      "**/redirections/*.feature",
+      "**/orderProcess/*.feature",
     ],
   },
 });

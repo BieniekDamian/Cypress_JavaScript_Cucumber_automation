@@ -1,6 +1,6 @@
 export const users = {
-    "tester": {
-        "login": "x",
-        "password": "y"
+    "standard_user": {
+        "login": "standard_user",
+        "password": "secret_sauce"
     },
 };

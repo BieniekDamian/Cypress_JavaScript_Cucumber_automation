@@ -1,3 +1,12 @@
+export const testStore = {};
+
+Cypress.Commands.add("saveAs", { prevSubject: true }, (value, propName) => {
+    testStore[propName] = value;
+    return value;
+});
+
+
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite

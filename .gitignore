@@ -1,5 +1,9 @@
 node_modules
 package-lock.json
+*.log
+*.txt
+*.tmp
+
 
 # Cypress
 cypress/results/*
@@ -7,8 +11,9 @@ cypress/screenshots/*
 cypress/downloads/*
 cypress/e2e/*
 cypress/videos
-*.log
-*.txt
+cypress.env.json
+cypress/support/users.js
+reports/
 
 # Browserstack
 log/
