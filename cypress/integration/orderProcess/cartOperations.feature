@@ -1,4 +1,4 @@
-Feature: Feature name
+Feature: Adding and removing items from cart
 
     Narrative
     As a User
@@ -9,19 +9,19 @@ Feature: Feature name
         Given User opens "login_page"
         When User login as "standard_user"
 
-    # Scenario Outline: Adding specified number of items to the cart
-    #     When User adds <numberOfItems> to the cart
-    #     Then Cart badge should display "<numberOfItems>" items inside cart
-    #     Examples:
-    #         | numberOfItems |
-    #         | 1             |
-    #         | 2             |
-    #         | 3             |
-    #         | 4             |
-    #         | 5             |
-    #         | 6             |
+    Scenario Outline: Adding specified number of items to the cart
+        When User adds <numberOfItems> to the cart
+        Then Cart badge should display "<numberOfItems>" items inside cart
+        Examples:
+            | numberOfItems |
+            | 1             |
+            | 2             |
+            | 3             |
+            | 4             |
+            | 5             |
+            | 6             |
 
-    Scenario Outline: Removing specified number of items to the cart
+    Scenario Outline: Removing specified number of items from the cart
         When User adds <numberOfItems> to the cart
         And Cart badge should display "<numberOfItems>" items inside cart
         And User removes all of the added items

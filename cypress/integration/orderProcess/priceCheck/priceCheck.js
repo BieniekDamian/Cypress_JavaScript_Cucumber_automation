@@ -13,13 +13,6 @@ When("User stores price of the item number {int}", (itemNumber) => {
       .saveAs('price');
 });
 
-And("User adds item number {int} to the cart", (itemNumber) => {
-    cy.get(selectors.inventoryItem)
-      .eq(itemNumber-1)
-      .find(selectors.addItemToCart)
-      .click();
-});
-
 Then("Subtotal price of added single item should be displayed", () => {
     cy.get(selectors.summarySubtotalPrice)
       .invoke('text')

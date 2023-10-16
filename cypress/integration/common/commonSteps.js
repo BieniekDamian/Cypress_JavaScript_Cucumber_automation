@@ -43,3 +43,11 @@ When("User adds all of the items to the cart", () => {
         cy.get(selectors.cartCapacity).should('have.text', $len.toString());
     });
 });
+
+// Add single item to the cart
+And("User adds item number {int} to the cart", (itemNumber) => {
+    cy.get(selectors.inventoryItem)
+      .eq(itemNumber-1)
+      .find(selectors.addItemToCart)
+      .click();
+});
